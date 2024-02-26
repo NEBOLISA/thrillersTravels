@@ -1,17 +1,27 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+"use client";
 import Image from "next/image";
+import { useState } from "react";
 
 const Sidebar = () => {
+  const [selectedMenu, setSelectedMenu] = useState("dashboard");
+  const setMenuItem = (menu) => {
+    setSelectedMenu(menu);
+  };
   return (
     <div className="h-lvh   bg-[#3D5654] w-72 rounded-r-3xl py-14  ">
       <div className=" bg-[#3D5654] pb-14 ">
         <div className="flex flex-col items-center justify-center ">
-          <div className="p-2 border-[1.5px] border-[#D3A019] border-l-[.4px] border-b-[.4px] rounded-full">
+          <div className="p-2 h-32 w-32  border-[1.5px] border-[#D3A019] border-l-[.4px] border-b-[.4px] rounded-full">
             <Image
-              className="rounded-full  	"
+              className="rounded-full "
               src="/images/profile.jpg"
               width={120}
               height={120}
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+              }}
               alt="Picture of the author"
             />
           </div>
@@ -22,7 +32,14 @@ const Sidebar = () => {
       <div className="bg-[#415C5A] rounded-br-2xl ">
         <div className="mb-10">
           <ul className="sidebar-ul ml-6 pt-8">
-            <li className="h-[50px] relative rounded-tl-3xl rounded-bl-3xl pl-4 hover:bg-[#E1ECEB] hover:text-[#415C5A] ">
+            <li
+              onClick={() => setMenuItem("dashboard")}
+              className={`${
+                selectedMenu === "dashboard"
+                  ? "selected h-[50px] relative rounded-tl-3xl rounded-bl-3xl pl-4 "
+                  : " h-[50px] text-white relative rounded-tl-3xl rounded-bl-3xl pl-4 "
+              }`}
+            >
               <Image
                 src="/images/icons/home.svg"
                 alt="icon"
@@ -31,7 +48,14 @@ const Sidebar = () => {
               />
               DASHBOARD
             </li>
-            <li className="h-[50px] rounded-tl-3xl rounded-bl-3xl hover:text-[#415C5A] pl-4 hover:bg-[#E1ECEB]">
+            <li
+              onClick={() => setMenuItem("flights")}
+              className={`${
+                selectedMenu === "flights"
+                  ? "selected h-[50px] relative rounded-tl-3xl rounded-bl-3xl pl-4 "
+                  : " h-[50px] text-white relative rounded-tl-3xl rounded-bl-3xl pl-4 "
+              }`}
+            >
               <Image
                 src="/images/icons/flight.svg"
                 alt="icon"
@@ -41,7 +65,14 @@ const Sidebar = () => {
               />
               FLIGHTS
             </li>
-            <li className="h-[50px] rounded-tl-3xl rounded-bl-3xl hover:text-[#415C5A] pl-4 hover:bg-[#E1ECEB]">
+            <li
+              onClick={() => setMenuItem("wallet")}
+              className={`${
+                selectedMenu === "wallet"
+                  ? "selected h-[50px] relative rounded-tl-3xl rounded-bl-3xl pl-4 "
+                  : " h-[50px] text-white relative rounded-tl-3xl rounded-bl-3xl pl-4 "
+              }`}
+            >
               <Image
                 src="/images/icons/wallet.png"
                 alt="icon"
@@ -51,9 +82,16 @@ const Sidebar = () => {
               />
               WALLET
             </li>
-            <li className="h-[50px] rounded-tl-3xl rounded-bl-3xl pl-4 hover:text-[#415C5A] hover:bg-[#E1ECEB]">
+            <li
+              onClick={() => setMenuItem("reports")}
+              className={`${
+                selectedMenu === "reports"
+                  ? "selected h-[50px] relative rounded-tl-3xl rounded-bl-3xl pl-4 "
+                  : " h-[50px] text-white relative rounded-tl-3xl rounded-bl-3xl pl-4 "
+              }`}
+            >
               <Image
-                src="/images/icons/house.png"
+                src="/images/icons/reports.png"
                 alt="icon"
                 width={30}
                 color="#D3A019"
@@ -61,7 +99,14 @@ const Sidebar = () => {
               />
               REPORTS
             </li>
-            <li className="h-[50px] rounded-tl-3xl rounded-bl-3xl pl-4 hover:text-[#415C5A] hover:bg-[#E1ECEB]">
+            <li
+              onClick={() => setMenuItem("statistics")}
+              className={`${
+                selectedMenu === "statistics"
+                  ? "selected h-[50px] relative rounded-tl-3xl rounded-bl-3xl pl-4 "
+                  : " h-[50px] text-white relative rounded-tl-3xl rounded-bl-3xl pl-4 "
+              }`}
+            >
               <Image
                 src="/images/icons/statistics.svg"
                 alt="icon"
@@ -71,7 +116,14 @@ const Sidebar = () => {
               />
               STATISTICS
             </li>
-            <li className="h-[50px] rounded-tl-3xl rounded-bl-3xl pl-4 hover:text-[#415C5A] hover:bg-[#E1ECEB]">
+            <li
+              onClick={() => setMenuItem("settings")}
+              className={`${
+                selectedMenu === "settings"
+                  ? "selected h-[50px] relative rounded-tl-3xl rounded-bl-3xl pl-4 "
+                  : " h-[50px] text-white relative rounded-tl-3xl rounded-bl-3xl pl-4 "
+              }`}
+            >
               <Image
                 src="/images/icons/settings.svg"
                 alt="icon"
@@ -86,34 +138,62 @@ const Sidebar = () => {
         <div className="ml-10 pb-4">
           <h3 className="my-5 text-xs text-[#D3A019] ">ACTIVE USERS</h3>
           <div className="flex mb-3 ">
-            <Image
-              className="rounded-full users-pics no-ml"
-              src="/images/profile.jpg"
-              alt="active-pics"
-              width={30}
-              height={30}
-            />
-            <Image
-              className="rounded-full users-pics "
-              src="/images/profile.jpg"
-              alt="active-pics"
-              width={30}
-              height={30}
-            />
-            <Image
-              className="rounded-full users-pics"
-              src="/images/profile.jpg"
-              alt="active-pics"
-              width={30}
-              height={30}
-            />
-            <Image
-              className="rounded-full users-pics"
-              src="/images/profile.jpg"
-              alt="active-pics"
-              width={30}
-              height={30}
-            />
+            <div className=" no-ml h-[30px] w-[30px]  rounded-full">
+              <Image
+                className="rounded-full  "
+                src="/images/profile.jpg"
+                alt="active-pics"
+                width={30}
+                height={30}
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover",
+                }}
+              />
+            </div>
+            <div className=" users-pics h-[30px] w-[30px]  rounded-full">
+              <Image
+                className="rounded-full  "
+                src="/images/profile.jpg"
+                alt="active-pics"
+                width={30}
+                height={30}
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover",
+                }}
+              />
+            </div>
+            <div className=" users-pics h-[30px] w-[30px]  rounded-full">
+              <Image
+                className="rounded-full "
+                src="/images/profile.jpg"
+                alt="active-pics"
+                width={30}
+                height={30}
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover",
+                }}
+              />
+            </div>
+            <div className=" users-pics h-[30px] w-[30px]  rounded-full">
+              <Image
+                className="rounded-full "
+                src="/images/profile.jpg"
+                alt="active-pics"
+                width={30}
+                height={30}
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover",
+                }}
+              />
+            </div>
             <div className="rounded-full w-[30px] h-[30px] users-pics flex items-center justify-center bg-[#D3A019] text-white text-[10px]">
               +70
             </div>

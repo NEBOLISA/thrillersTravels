@@ -31,11 +31,13 @@ const Header = () => {
           selectedDate={selectedDate}
           handleChange={handleChange}
           imgsrc1={"/images/icons/calendar.svg"}
+          imgsrc2={"/images/icons/calendar-white.png"}
           text1={formatDate(selectedDate)}
           calendar
         />
         <HeaderComp2
           imgsrc1={"/images/icons/person.svg"}
+          imgsrc2={"/images/icons/person-white.png"}
           text1={"2 TRAVELLER"}
         />
       </div>
@@ -48,6 +50,7 @@ const Header = () => {
         />
         <HeaderComp2
           imgsrc1={"/images/icons/Couch.svg"}
+          imgsrc2={"/images/icons/couch-white.png"}
           text1={"FIRST CLASS"}
         />
         <Button text={"search"} search />

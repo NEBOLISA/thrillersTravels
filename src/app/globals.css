@@ -31,7 +31,7 @@ body {
   display: flex;
   align-items: center;
   gap: 1.5rem;
-  color: white;
+
   position: relative;
   font-weight: 300;
   cursor: pointer;
@@ -48,17 +48,25 @@ body {
   height: 50px;
   border-radius: 0 0 25px 0;
   z-index: 0;
-  /* background: red; */
 }
 .sidebar-ul li::before {
   top: auto;
   bottom: -50px;
   border-radius: 0 25px 0 0;
 }
-.sidebar-ul li:hover::after {
+.selected {
+  background-color: #e1eceb;
+  color: #415c5a;
+}
+/* .selected li {
+  color: #415c5a;
+} */
+
+.selected::after {
   box-shadow: 0 25px 0 0 #e1eceb;
 }
-.sidebar-ul li:hover::before {
+
+.selected::before {
   box-shadow: 0 -25px 0 0 #e1eceb;
 }
 .users-pics {
@@ -78,4 +86,32 @@ body {
 }
 .right-main {
   flex: 0.3;
+}
+.price-tag1,
+.price-tag2 {
+  display: none;
+}
+.price-tag1::after,
+.price-tag2::after {
+  content: "";
+  position: absolute;
+  bottom: 27px;
+  left: 50%;
+  transform: translateX(-50%) rotate(360deg);
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent #d3a019 transparent;
+}
+.left-slider:hover .price-tag1,
+.right-slider:hover .price-tag2 {
+  display: block;
+}
+.header-icon-hover {
+  display: none;
+}
+.header-comp:hover .header-icon-hover {
+  display: flex;
+}
+.header-comp:hover .header-icon {
+  display: none;
 }

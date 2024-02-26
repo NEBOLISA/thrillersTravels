@@ -10,9 +10,7 @@ const HeaderComp1 = ({
 }) => {
   return (
     <div
-      className={`${
-        textOnly ? "" : ""
-      } rounded-[38px] flex-1 flex items-center ${
+      className={` rounded-[38px] flex-1 flex items-center ${
         textOnly ? "justify-between" : "justify-center"
       } gap-8 bg-[#E1ECEB] `}
     >

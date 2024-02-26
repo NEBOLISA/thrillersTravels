@@ -1,5 +1,6 @@
 import Image from "next/image";
 import BookNowComp from "./BookNowComp";
+import PriceSlider from "./PriceSlider";
 const Main = () => {
   return (
     <div className="mt-9">
@@ -38,12 +39,23 @@ const Main = () => {
             flightLogo={"/images/icons/map-marker.png"}
             fromLoc={"JFL"}
             fromTime={"13:00"}
-            flightName={"EMIRATES"}
+            flightName={"QATAR AIRWAYS"}
             duration={"11H 20M"}
             type={"NON-STOP"}
             toLoc={"BOM"}
             toTime={"14:20"}
-            price={"$1,254"}
+            price={"$2,072"}
+          />
+          <BookNowComp
+            flightLogo={"/images/icons/map-marker.png"}
+            fromLoc={"JFL"}
+            fromTime={"13:00"}
+            flightName={"LUFTHANSA"}
+            duration={"11H 20M"}
+            type={"NON-STOP"}
+            toLoc={"BOM"}
+            toTime={"14:20"}
+            price={"$1,872"}
           />
           <BookNowComp
             flightLogo={"/images/icons/map-marker.png"}
@@ -54,18 +66,7 @@ const Main = () => {
             type={"NON-STOP"}
             toLoc={"BOM"}
             toTime={"14:20"}
-            price={"$1,254"}
-          />
-          <BookNowComp
-            flightLogo={"/images/icons/map-marker.png"}
-            fromLoc={"JFL"}
-            fromTime={"13:00"}
-            flightName={"EMIRATES"}
-            duration={"11H 20M"}
-            type={"NON-STOP"}
-            toLoc={"BOM"}
-            toTime={"14:20"}
-            price={"$1,254"}
+            price={"$1,872"}
           />
         </div>
 
@@ -97,6 +98,10 @@ const Main = () => {
               <p className="text-[12px] px-4 py-2 cursor-pointer hover:bg-[#D3A019] hover:rounded-3xl ">
                 MORE STOP
               </p>
+            </div>
+            <div className="mt-6">
+              <p className="text-[12px] text-white mb-3">PRICE</p>
+              <PriceSlider />
             </div>
           </div>
         </div>
