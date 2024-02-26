@@ -25,7 +25,7 @@ const Main = () => {
         <div className="left-main py-4 bg-white rounded-3xl">
           <BookNowComp
             first
-            flightLogo={"/images/icons/map-marker.png"}
+            flightLogo={"/images/icons/emirates.png"}
             fromLoc={"JFL"}
             fromTime={"13:00"}
             flightName={"EMIRATES"}
@@ -36,7 +36,7 @@ const Main = () => {
             price={"$1,254"}
           />
           <BookNowComp
-            flightLogo={"/images/icons/map-marker.png"}
+            flightLogo={"/images/icons/qatar.png"}
             fromLoc={"JFL"}
             fromTime={"13:00"}
             flightName={"QATAR AIRWAYS"}
@@ -47,7 +47,7 @@ const Main = () => {
             price={"$2,072"}
           />
           <BookNowComp
-            flightLogo={"/images/icons/map-marker.png"}
+            flightLogo={"/images/icons/emirates.png"}
             fromLoc={"JFL"}
             fromTime={"13:00"}
             flightName={"LUFTHANSA"}
@@ -58,7 +58,7 @@ const Main = () => {
             price={"$1,872"}
           />
           <BookNowComp
-            flightLogo={"/images/icons/map-marker.png"}
+            flightLogo={"/images/icons/emirates.png"}
             fromLoc={"JFL"}
             fromTime={"13:00"}
             flightName={"EMIRATES"}
