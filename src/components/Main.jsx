@@ -23,6 +23,29 @@ const Main = () => {
       <div className="flex gap-4 my-6">
         <div className="left-main py-4 bg-white rounded-3xl">
           <BookNowComp
+            first
+            flightLogo={"/images/icons/map-marker.png"}
+            fromLoc={"JFL"}
+            fromTime={"13:00"}
+            flightName={"EMIRATES"}
+            duration={"11H 20M"}
+            type={"NON-STOP"}
+            toLoc={"BOM"}
+            toTime={"14:20"}
+            price={"$1,254"}
+          />
+          <BookNowComp
+            flightLogo={"/images/icons/map-marker.png"}
+            fromLoc={"JFL"}
+            fromTime={"13:00"}
+            flightName={"EMIRATES"}
+            duration={"11H 20M"}
+            type={"NON-STOP"}
+            toLoc={"BOM"}
+            toTime={"14:20"}
+            price={"$1,254"}
+          />
+          <BookNowComp
             flightLogo={"/images/icons/map-marker.png"}
             fromLoc={"JFL"}
             fromTime={"13:00"}
@@ -60,7 +83,9 @@ const Main = () => {
               <p className="font-normal text-lg">BOM</p>
             </div>
           </div>
-          <div></div>
+          <div>
+            <Image src="/images/main.png" width={150} height={150} alt="main" />
+          </div>
           <div></div>
         </div>
       </div>

@@ -83,9 +83,9 @@ const Sidebar = () => {
             </li>
           </ul>
         </div>
-        <div className="ml-10">
+        <div className="ml-10 pb-4">
           <h3 className="my-5 text-xs text-[#D3A019] ">ACTIVE USERS</h3>
-          <div className="flex ">
+          <div className="flex mb-3 ">
             <Image
               className="rounded-full users-pics no-ml"
               src="/images/profile.jpg"
@@ -117,6 +117,14 @@ const Sidebar = () => {
             <div className="rounded-full w-[30px] h-[30px] users-pics flex items-center justify-center bg-[#D3A019] text-white text-[10px]">
               +70
             </div>
+          </div>
+          <div>
+            <Image
+              src="/images/sidebar.png"
+              width={150}
+              height={150}
+              alt="sidebar"
+            />
           </div>
         </div>
       </div>

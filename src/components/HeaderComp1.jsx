@@ -26,7 +26,7 @@ const HeaderComp1 = ({
         <p
           className={` font-medium py-4 px-4 text-[#3D5654] ${
             textOnly
-              ? "hover:rounded-3xl hover:text-white  hover:bg-[#3D5654] hover:py-3 hover:ml-1"
+              ? "rounded-3xl hover:text-white  hover:bg-[#3D5654] hover:py-3 hover:ml-1 transition-all duration-500 ease-in-out"
               : ""
           }`}
         >
@@ -37,7 +37,7 @@ const HeaderComp1 = ({
         <p
           className={`text-[#3D5654] font-medium cursor-pointer py-4 px-4  ${
             textOnly
-              ? "hover:rounded-3xl hover:text-white  hover:bg-[#3D5654] hover:py-3 hover:ml-1"
+              ? "rounded-3xl hover:text-white  hover:bg-[#3D5654] hover:py-3 hover:ml-1 transition-all duration-500 ease-in-out"
               : ""
           }`}
         >
@@ -51,7 +51,7 @@ const HeaderComp1 = ({
       <div
         className={`flex cursor-pointer gap-4 items-center py-4 px-3 text-[#3D5654] ${
           textOnly
-            ? "hover:rounded-3xl hover:text-white  hover:bg-[#3D5654] hover:py-3 hover:mr-1"
+            ? "rounded-3xl hover:text-white  hover:bg-[#3D5654] hover:py-3 transition-all duration-500 ease-in-out hover:mr-1"
             : ""
         } `}
       >

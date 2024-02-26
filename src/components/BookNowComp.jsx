@@ -10,9 +10,14 @@ const BookNowComp = ({
   toLoc,
   toTime,
   price,
+  first,
 }) => {
   return (
-    <div className="flex items-center justify-between bg-white  px-6 py-9 border-b-2 border-dashed border-[#e1eceb]">
+    <div
+      className={`flex items-center justify-between bg-white  px-6 py-9 ${
+        first ? "" : "border-t-2"
+      } border-dashed border-[#e1eceb]`}
+    >
       <div>
         <Image src={flightLogo} alt="flightlogo" width={30} height={30} />
       </div>
